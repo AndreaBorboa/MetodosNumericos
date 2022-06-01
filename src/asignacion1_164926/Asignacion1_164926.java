@@ -16,7 +16,7 @@ public class Asignacion1_164926 {
     public static void main(String[] args) {
         // TODO code application logic here
          //variables
-        double incremento=0.2;
+        
         double x=1;
         Scanner scanner = new Scanner(System.in);
         
@@ -26,6 +26,9 @@ public class Asignacion1_164926 {
         double xini = scanner.nextDouble();
         System.out.print("Valor de X final: ");
         double xfin = scanner.nextDouble();
+        System.out.print("Valor del incremento para x: ");
+        double incremento = scanner.nextDouble();
+        
         
         double fxfin=f(xfin);
         double fxini=f(xini);
