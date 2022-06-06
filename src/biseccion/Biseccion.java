@@ -44,7 +44,7 @@ public class Biseccion {
         
         //Encabezado de la tabla para los resultados 
         System.out.println("-----------------------------------------------------------------------------");
-        System.out.printf("%20s %10s %10s %10s %10s %10s", "xi", "xd", "f(xi)", "f(xd)","xm","f(xm)");
+        System.out.printf("%10s %10s %10s %10s %10s %10s", "xi", "xd", "f(xi)", "f(xd)","xm","f(xm)");
         System.out.println();
         System.out.println("-----------------------------------------------------------------------------");
         
@@ -57,7 +57,7 @@ public class Biseccion {
             fxm=f(xm);// calcula f(xm) llamando al metodo "f"
             
             //Se imprimen los resultados en la tabla con el formato indicado.
-            System.out.format("%20s %10s %10s %10s %10s %10s",
+            System.out.format("%10s %10s %10s %10s %10s %10s",
                     formato.format(xizq),formato.format(xder),formato.format(fxizq),formato.format(fxder),formato.format(xm),formato.format(fxm));
             System.out.println();
            
