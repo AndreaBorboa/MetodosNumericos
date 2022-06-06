@@ -33,7 +33,7 @@ public class Biseccion {
     
     //Metodo que calcula xm, f(xm), f(xizq), f(xder) y reemplaza x derecha y x izquierda segun sea el caso. 
     private static void biseccion(double xizq, double xder, double error) {
-        DecimalFormat formato = new DecimalFormat("0.0000");//formato para los decimales de resultados. 
+        DecimalFormat formato = new DecimalFormat("0.####");//formato para los decimales de resultados. 
         
         double xm = 0;
         double fxm=0;
@@ -58,7 +58,7 @@ public class Biseccion {
             
             //Se imprimen los resultados en la tabla con el formato indicado.
             System.out.format("%20s %10s %10s %10s %10s %10s",
-                    xizq,xder,formato.format(fxizq),formato.format(fxder),formato.format(xm),formato.format(fxm));
+                    formato.format(xizq),formato.format(xder),formato.format(fxizq),formato.format(fxder),formato.format(xm),formato.format(fxm));
             System.out.println();
            
             //condicion para reemplazar x izquiera o x derecha segun sea el caso. 
