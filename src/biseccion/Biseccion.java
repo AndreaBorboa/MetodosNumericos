@@ -43,10 +43,10 @@ public class Biseccion {
         
         
         //Encabezado de la tabla para los resultados 
-        System.out.println("-----------------------------------------------------------------------------");
+        System.out.println("─♡──────────────────────────────────────♡─");
         System.out.printf("%10s %10s %10s %10s %10s %10s", "xi", "xd", "f(xi)", "f(xd)","xm","f(xm)");
         System.out.println();
-        System.out.println("-----------------------------------------------------------------------------");
+        System.out.println("─♡──────────────────────────────────────♡─");
         
         //Ciclo que se repite mientras el valor absoluto de f(xm) sea mayor al error. 
         while(Math.abs(fxm)>error){
@@ -60,6 +60,7 @@ public class Biseccion {
             System.out.format("%10s %10s %10s %10s %10s %10s",
                     formato.format(xizq),formato.format(xder),formato.format(fxizq),formato.format(fxder),formato.format(xm),formato.format(fxm));
             System.out.println();
+            
            
             //condicion para reemplazar x izquiera o x derecha segun sea el caso. 
             if(fxm<0){
@@ -78,6 +79,7 @@ public class Biseccion {
                 
             } 
         }
+        System.out.println("─♡──────────────────────────────────────♡─");
         
     }
     
