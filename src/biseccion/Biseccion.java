@@ -63,9 +63,19 @@ public class Biseccion {
            
             //condicion para reemplazar x izquiera o x derecha segun sea el caso. 
             if(fxm<0){
-                xizq=xm;
+                if(fxizq<0){
+                    xizq=xm;
+                }else{
+                    xder=xm;
+                }
+               
             }else{
-                xder=xm;
+                if(fxizq>0){
+                    xizq=xm;
+                }else{
+                    xder=xm;
+                }
+                
             } 
         }
         
