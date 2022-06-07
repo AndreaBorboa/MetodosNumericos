@@ -85,7 +85,7 @@ public class ReglaFalsa {
     
      //Metodo que calcula la funcion solicitada 
     private static double f(double x) {
-        return (Math.pow(x, 3) - (7.014 * Math.pow(x, 2)) - (13.024 * x) - 3.548);
+        return Math.pow(x, 3) - (7.014 * Math.pow(x, 2)) - (13.324 * x) - 3.548;
     }
     
 }
