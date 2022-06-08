@@ -85,6 +85,8 @@ public class Biseccion {
     
     //Metodo que calcula la funcion solicitada 
     private static double f(double x) {
+        //return (3 *x) -4;
+        //return Math.pow(x, 3) + (3 * Math.pow(x, 2)) + (3 * x) + 1;
         return ( -2.1 + (6.21 * x) - (3.9 * Math.pow(x, 2)) + (0.667 * Math.pow(x, 3)) );
     }
     
