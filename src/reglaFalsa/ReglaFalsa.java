@@ -34,10 +34,10 @@ public class ReglaFalsa {
         double xm = 0;
         double fxm=0;
         
-        double fxder=f(xder);
-        double fxizq=f(xizq);
+        double fxder=0;
+        double fxizq=0;
         
-        xm = ((xizq*fxder)- (xder*(fxizq))) / (fxder - fxizq); // calcula xm
+        xm = ((xizq*fxder)- (xder*(fxizq))) / (xder - xizq); // calcula xm
         fxm=f(xm); //obtiene f(xm) llamando al metodo "f" y enviando como parametro xm
         
         
