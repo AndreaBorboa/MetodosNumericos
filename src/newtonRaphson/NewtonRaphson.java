@@ -32,7 +32,7 @@ public class NewtonRaphson {
         
         int iteracion = 0; // se inicializa la variable para mostrar las iteraciones
         double fx=f(x); // se calcula f(x)
-        double derivada = derivada(x); //se calcula la derivada de x
+        double deriv = derivada(x);
         
         //Encabezado de la tabla para los resultados 
         System.out.println("─♡───────────────────────────♡─");
@@ -40,18 +40,19 @@ public class NewtonRaphson {
         System.out.println();
         System.out.println("─♡───────────────────────────♡─");
         
+        
         //Mientras que el valor absoluto de f(x) sea mayor al error se repite todo lo que esta dentro.
         while(Math.abs(fx)>error){
-            fx=f(x);// se calcula f(x)
-            
+           
+            deriv=derivada(x);
             //se imprimen los resultados de cada vuelta.
             System.out.format("%14s %10s %10s %10s",
-                    iteracion,formato.format(x),formato.format(fx),formato.format(fx),formato.format(derivada));
+                    iteracion,formato.format(x),formato.format(fx),formato.format(deriv));
             System.out.println();
             
-            derivada = derivada(x);// se calcula la derivada de x mandando a llamar a la funcion derivada.
-            x=x-(f(x)/derivada); // se cambia el valor de x con la formula x = x - (f(x)/f'(x))
-            fx=f(x); // se calcula la f(x) evaluada en la nueva x calculada. 
+            x=x-(f(x)/deriv); // se cambia el valor de x con la formula x = x - (f(x)/f'(x))
+            fx=f(x);// se calcula f(x)
+            deriv = derivada(x); //se calcula la derivada de x
             
             iteracion=iteracion+1; // contador para las iteraciones. 
         }
