@@ -40,16 +40,13 @@ public class EliminacionGauss {
         
         Scanner scanner = new Scanner(System.in);
          
-        System.out.println("Cantidad de ecuaciones: ");
-        this.numeroEcuaciones = scanner.nextInt(); // se lee la cantidad de ecuaciones que contiene el sistema de ecuaciones.
-        
-        this.sistemaEcuaciones = new double[numeroEcuaciones][4]; // se crea la matriz sistemaEcuaciones con elnumero de filas de numeroEuaciones y 4 columnas.
+        this.sistemaEcuaciones = new double[3][4]; // se crea la matriz sistemaEcuaciones con elnumero de filas de numeroEuaciones y 4 columnas.
         
         
         System.out.println("Ingrese los valores de los coeficientes de las ecuaciónes: ");
         
         
-        for(int f = 0; f < numeroEcuaciones; f++){ //ciclo para leer el numero de la ecuacion que se solicita. 
+        for(int f = 0; f < 3; f++){ //ciclo para leer el numero de la ecuacion que se solicita. 
             System.out.println("⚘ — — — — —| Ecuación [" +(f+1)+ "] |— — — — — ⚘");
             
             
@@ -65,7 +62,7 @@ public class EliminacionGauss {
         }
         
         
-        return numeroEcuaciones; // regresa el numero de ecuaciones necesarios para el metodo eliminacionGauss()
+        return 3; // regresa el numero de ecuaciones necesarios para el metodo eliminacionGauss()
     }
    
     
@@ -78,7 +75,7 @@ public class EliminacionGauss {
         this.ecuacionesb = this.sistemaEcuaciones.clone(); 
         
         //mientras que "n" sea menor al numero de ecuaciones se incrementa 1 en n.
-        for(int n = 0; n < numeroEcuaciones; n++){ 
+        for(int n = 0; n < 3; n++){ 
             //mientras que f sea menor al tamaño de la matriz ecuacionesb se incrementa 1 en f.
             for(int f = n; f < this.ecuacionesb.length; f++){
                 
@@ -112,7 +109,7 @@ public class EliminacionGauss {
         //Aqui se sustituyen las x para sacar el valor de todas las x. 
         
         // El tamaño de valores de x va a ser igual al numero de ecuaciones. 
-        this.valoresX = new double[this.numeroEcuaciones];
+        this.valoresX = new double[3];
         
        //mientras que f que es igual al tamaño de la matriz ecuacionesb menos uno sea mayor a 0 se dismunuye 1 en f. 
         for(int f = this.ecuacionesb.length-1 ; f >= 0; f--){
