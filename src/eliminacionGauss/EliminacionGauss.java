@@ -16,7 +16,7 @@ public class EliminacionGauss {
     private double[][] sistemaEcuaciones; // Matriz donde se almacenarán las ecuaciones iniciales del sistema de ecuaciones.
     private double[][] ecuacionesb; //Matriz donde se almacenaran las ecuaciones "b" del sistema de ecuaciones que son calculadas en el metodo eliminacionGauss()
     private double[] valoresX; // Arreglo donde se almacenaran las soluciones de x del sistema de ecuaciones es decir: x1,x2,x3, ++
-    private int numeroEcuaciones; // Variable para almacenar la cantidad de ecuaciones pertenecientes al sistema de ecuaciones.
+   
     
     public EliminacionGauss(){} //Contrucctor vacio de la clase EliminacionGauss
     
@@ -88,6 +88,7 @@ public class EliminacionGauss {
                     for(int c = n; c < this.sistemaEcuaciones[f].length; c++){
                         //ecuacionesb en el renglon f y columna c  va a ser igual a ecuacionesb en el renglon f y columna c / el numero divisor que calculamos anteriormente.
                         this.ecuacionesb[f][c] = Double.parseDouble(this.formato.format((this.ecuacionesb[f][c]/Numerodivisor)));
+                        
                     }
                 }
                 
@@ -99,6 +100,7 @@ public class EliminacionGauss {
                     for(int c = n; c < this.sistemaEcuaciones[f].length; c++){
                         //ecuacionesb en el renglon f y columna c  va a ser igual a ecuacionesb en el renglon f y columna c + ecuacionesb en el renglon n y columna c por el numero que multiplica
                         this.ecuacionesb[f][c] = Double.parseDouble(this.formato.format(this.ecuacionesb[f][c]+(this.ecuacionesb[n][c]*NumeroQueMultiplica)));
+                        
                     }
                 }
                 
@@ -112,7 +114,10 @@ public class EliminacionGauss {
         this.valoresX = new double[3];
         
        //mientras que f que es igual al tamaño de la matriz ecuacionesb menos uno sea mayor a 0 se dismunuye 1 en f. 
-        for(int f = this.ecuacionesb.length-1 ; f >= 0; f--){
+       
+       
+
+       for(int f = this.ecuacionesb.length-1 ; f >= 0; f--){
             
             double suma = 0;
             int contador = 0;
@@ -129,7 +134,8 @@ public class EliminacionGauss {
             }
             int columna = this.ecuacionesb[f].length-1; //variable para calcular la columna en ecuacionesb.
             //valoresX en la pocision f va a ser igual a ecuacionesb en el renglon f y la columna columna mas -1*suma entre ecuaciones b en el renglon y columna f.
-            this.valoresX[f] = (this.ecuacionesb[f][columna]+(-1*suma))/this.ecuacionesb[f][f];
+           
+            this.valoresX[f] = (suma*-1) + this.ecuacionesb[f][columna];
         }
     }
  
@@ -141,7 +147,9 @@ public class EliminacionGauss {
         System.out.println("┌───────────Solución───────────┐");
         for(int f = 0; f< this.valoresX.length; f++){
             System.out.println("  x" + (f+1) + ": " + formato.format(this.valoresX[f]));
+            
         }
+         
          System.out.println("└────────────...────────────┘");
     }
     
