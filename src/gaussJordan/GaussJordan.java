@@ -80,7 +80,7 @@ public class GaussJordan {
         
         //Se imprimen los valores de las x. 
         for (int x = 0; x < 3; x++) {
-            System.out.println("La variable X" + (x + 1) + " es: " + this.sistemaEcuaciones[x][3]);
+            System.out.println("x" + (x + 1) + " : " + this.sistemaEcuaciones[x][3]);
         }
     }
     
