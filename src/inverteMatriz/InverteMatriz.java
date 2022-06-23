@@ -1,8 +1,4 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package inverteMatriz;
 
 import java.text.DecimalFormat;
@@ -10,7 +6,7 @@ import java.util.Scanner;
 
 /**
  *
- * @author andre
+ * @author Andrea Borboa Ramírez
  */
 public class InverteMatriz {
     
@@ -42,7 +38,7 @@ public class InverteMatriz {
 
     }
     
-    public void ampliarMatriz(int f){
+    public void ampliarMatriz(int f){ //metodo para ampliar la matriz con 0 y 1 en donde es necesario. 
         
         switch(f){
                 case 0:
@@ -130,9 +126,9 @@ public class InverteMatriz {
     public static void main(String[] args) {
         // TODO code application logic here
         
-       InverteMatriz inverteMatriz = new InverteMatriz(); // se crea un objeto de la clase GaussJordan.
+       InverteMatriz inverteMatriz = new InverteMatriz(); // se crea un objeto de la clase InvierteMatriz.
         inverteMatriz.leeMatriz();// Se llama al metodo leeEcuaciones.
-        inverteMatriz.invertirMatriz(); //Se llama al metodo gaussJordan.
+        inverteMatriz.invertirMatriz(); //Se llama al metodo invertrMatriz.
     }
     
 }

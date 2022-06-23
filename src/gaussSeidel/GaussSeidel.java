@@ -48,7 +48,7 @@ public class GaussSeidel {
             this.sistemaEcuaciones[f][3] = tec.nextDouble();
         }
 
-        System.out.println("————————— Error ————————");
+        System.out.println("⚘ — — — — —| Error |— — — — — ⚘");
         error = tec.nextDouble(); //solicita el error aproximado. 
     }
 
