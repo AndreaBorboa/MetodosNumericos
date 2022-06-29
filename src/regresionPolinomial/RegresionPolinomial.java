@@ -172,8 +172,11 @@ public class RegresionPolinomial {
     }
     
     public void despliegaSolucion(){
+        System.out.println("━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━");
+        System.out.println("");
         System.out.println("Ecuación: ");
         System.out.println("y = " + sistemaEcuaciones[0][3] + " + " + sistemaEcuaciones[1][3] + "x + " + sistemaEcuaciones[2][3] + "x^2");
+        System.out.println("");
     }
     
     
