@@ -33,6 +33,11 @@ public class RegresionPolinomial {
 
         Scanner tec = new Scanner(System.in);
         
+        System.out.println("━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━");
+        System.out.println("⚘ — — — — —| REGRESIÓN POLINOMIAL |— — — — — ⚘");
+        System.out.println("━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━");
+        System.out.println("");
+        
         System.out.println("Número de elementos: ");
         numeroElementos = tec.nextInt();
         puntosx = new double [numeroElementos];
