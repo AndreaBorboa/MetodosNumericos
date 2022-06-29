@@ -2,7 +2,6 @@
 package regresionPolinomial;
 
 import java.util.Scanner;
-import sun.net.www.content.audio.x_aiff;
 
 /**
  *
