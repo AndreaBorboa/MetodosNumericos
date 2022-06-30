@@ -1,6 +1,7 @@
 
 package regresionPolinomial;
 
+import java.text.DecimalFormat;
 import java.util.Scanner;
 
 /**
@@ -105,7 +106,38 @@ public class RegresionPolinomial {
     }
     
     public void regresionPolinomial(){
+        DecimalFormat formato = new DecimalFormat("0.####");//formato para los decimales de resultados. 
         creaSumatorias();
+        
+        
+        
+        System.out.println("━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━");
+        System.out.println("⚘ — — — — — — —| TABLA DE VALORES |— — — — — — — ⚘");
+        System.out.println("━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━");
+        System.out.println("");
+        
+        
+        System.out.println("----------------------------------------------------------------");
+        System.out.printf("%5s %5s %5s %7s %6s %6s %5s ", "|x|", "|y|", "|x^2|", "|x^3|", "|x^4|", "|x*y|", "|x^2*y|");
+        System.out.println();
+        System.out.println("----------------------------------------------------------------");
+        
+        for (int i = 0; i < puntosx.length; i++) {
+            System.out.format("%4s %5s %5s %6s %6s %6s %6s",
+                    formato.format(puntosx[i]), formato.format(puntosy[i]), formato.format(Math.pow(puntosx[i], 2)),  formato.format(Math.pow(puntosx[i], 3)),formato.format(Math.pow(puntosx[i], 4)),  formato.format(puntosx[i]*puntosy[i]), formato.format(Math.pow(puntosx[i], 2) * puntosy[i]) );
+            System.out.println();  
+        }
+        
+         System.out.println("---------------------------------------------------------------");
+         System.out.format("%4s %5s %5s %6s %6s %6s %6s",
+                    formato.format(sumax),formato.format(sumay),formato.format(sumax2),formato.format(sumax3),formato.format(sumax4),formato.format(sumaxy),formato.format(sumax2y));
+            System.out.println(); 
+        System.out.println("----------------------------------------------------------------");
+        System.out.println("");
+        
+        
+        
+        
         creaMatrizSumatorias();
     }
     
